@@ -15,8 +15,8 @@ namespace MSIT_02.Models.Entities
         public string ConditionValue { get; set; }
         public ICollection<UserAchievement> UserAchievements { get; set; } = new List<UserAchievement>();
         //紀錄這項成就被哪些會員解鎖過
-        public IAchievementCondition BuildCondition()
-            => AchievementConditionFactory.Create(ConditionType, ConditionValue);
+        //public IAchievementCondition BuildCondition()
+        //    => AchievementConditionFactory.Create(ConditionType, ConditionValue);
         //把資料庫的文字條件，轉物件
     }
 }
