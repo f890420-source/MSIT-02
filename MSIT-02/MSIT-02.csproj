@@ -125,10 +125,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Entities\Achievement.cs" />
+    <Compile Include="Models\Entities\HikeRecord.cs" />
     <Compile Include="Models\Entities\Level.cs" />
     <Compile Include="Models\Entities\Member.cs" />
     <Compile Include="Models\Entities\SkillTag.cs" />
     <Compile Include="Models\Entities\User.cs" />
+    <Compile Include="Models\Entities\UserAchievement.cs" />
+    <Compile Include="Models\Entities\UserSkillTag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
