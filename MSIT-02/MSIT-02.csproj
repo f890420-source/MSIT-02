@@ -125,6 +125,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Entities\Achievement.cs" />
+    <Compile Include="Models\Entities\GroupScoring.cs" />
     <Compile Include="Models\Entities\HikeRecord.cs" />
     <Compile Include="Models\Entities\Level.cs" />
     <Compile Include="Models\Entities\Member.cs" />
