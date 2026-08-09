@@ -1,0 +1,58 @@
+﻿@model MSIT_02.Models.Entities.Achievement
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Achievement</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rarity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rarity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConditionType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConditionType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConditionValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConditionValue)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AchievementId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

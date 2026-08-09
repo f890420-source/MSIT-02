@@ -127,10 +127,12 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AchievementsController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\LevelsController.cs" />
     <Compile Include="Controllers\MemberAdminController.cs" />
     <Compile Include="Controllers\MemberController.cs" />
+    <Compile Include="Controllers\SkillTagsController.cs" />
     <Compile Include="Data\MSIT_02Context.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -204,6 +206,16 @@
     <Content Include="Views\Levels\Details.cshtml" />
     <Content Include="Views\Levels\Edit.cshtml" />
     <Content Include="Views\Levels\Index.cshtml" />
+    <Content Include="Views\Achievements\Create.cshtml" />
+    <Content Include="Views\Achievements\Delete.cshtml" />
+    <Content Include="Views\Achievements\Details.cshtml" />
+    <Content Include="Views\Achievements\Edit.cshtml" />
+    <Content Include="Views\Achievements\Index.cshtml" />
+    <Content Include="Views\SkillTags\Create.cshtml" />
+    <Content Include="Views\SkillTags\Delete.cshtml" />
+    <Content Include="Views\SkillTags\Details.cshtml" />
+    <Content Include="Views\SkillTags\Edit.cshtml" />
+    <Content Include="Views\SkillTags\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,50 @@
+﻿@model MSIT_02.Models.Entities.SkillTag
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SkillTag</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TagName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TagName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParentTagId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParentTagId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UnlockCondition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnlockCondition)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TagId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

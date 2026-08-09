@@ -10,108 +10,108 @@ using MSIT_02.Data;
 using MSIT_02.Models.Entities;
 
 namespace MSIT_02.Controllers
-{//單純字典表 CRUD,讓它先產生樣板，	等級對照表的新增/編輯/刪除/查詢(調門檻用)
-    public class LevelsController : Controller
+{
+    public class SkillTagsController : Controller
     {
         private MSIT_02Context db = new MSIT_02Context();
 
-        // GET: Levels
+        // GET: SkillTags
         public ActionResult Index()
         {
-            return View(db.Levels.ToList());
+            return View(db.SkillTags.ToList());
         }
 
-        // GET: Levels/Details/5
+        // GET: SkillTags/Details/5
         public ActionResult Details(long? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Level level = db.Levels.Find(id);
-            if (level == null)
+            SkillTag skillTag = db.SkillTags.Find(id);
+            if (skillTag == null)
             {
                 return HttpNotFound();
             }
-            return View(level);
+            return View(skillTag);
         }
 
-        // GET: Levels/Create
+        // GET: SkillTags/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Levels/Create
+        // POST: SkillTags/Create
         // 若要避免過量張貼攻擊，請啟用您要繫結的特定屬性。
         // 如需詳細資料，請參閱 https://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "LevelId,LevelName,MinXp,MaxXp")] Level level)
+        public ActionResult Create([Bind(Include = "TagId,Category,TagName,ParentTagId,UnlockCondition")] SkillTag skillTag)
         {
             if (ModelState.IsValid)
             {
-                db.Levels.Add(level);
+                db.SkillTags.Add(skillTag);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(level);
+            return View(skillTag);
         }
 
-        // GET: Levels/Edit/5
+        // GET: SkillTags/Edit/5
         public ActionResult Edit(long? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Level level = db.Levels.Find(id);
-            if (level == null)
+            SkillTag skillTag = db.SkillTags.Find(id);
+            if (skillTag == null)
             {
                 return HttpNotFound();
             }
-            return View(level);
+            return View(skillTag);
         }
 
-        // POST: Levels/Edit/5
+        // POST: SkillTags/Edit/5
         // 若要避免過量張貼攻擊，請啟用您要繫結的特定屬性。
         // 如需詳細資料，請參閱 https://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "LevelId,LevelName,MinXp,MaxXp")] Level level)
+        public ActionResult Edit([Bind(Include = "TagId,Category,TagName,ParentTagId,UnlockCondition")] SkillTag skillTag)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(level).State = EntityState.Modified;
+                db.Entry(skillTag).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(level);
+            return View(skillTag);
         }
 
-        // GET: Levels/Delete/5
+        // GET: SkillTags/Delete/5
         public ActionResult Delete(long? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Level level = db.Levels.Find(id);
-            if (level == null)
+            SkillTag skillTag = db.SkillTags.Find(id);
+            if (skillTag == null)
             {
                 return HttpNotFound();
             }
-            return View(level);
+            return View(skillTag);
         }
 
-        // POST: Levels/Delete/5
+        // POST: SkillTags/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(long id)
         {
-            Level level = db.Levels.Find(id);
-            db.Levels.Remove(level);
+            SkillTag skillTag = db.SkillTags.Find(id);
+            db.SkillTags.Remove(skillTag);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
