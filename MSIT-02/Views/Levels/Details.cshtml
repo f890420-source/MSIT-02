@@ -1,0 +1,42 @@
+﻿@model MSIT_02.Models.Entities.Level
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Level</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LevelName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LevelName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MinXp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinXp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxXp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaxXp)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.LevelId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

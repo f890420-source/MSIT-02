@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MSIT_02.Models.Entities.Level>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LevelName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MinXp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaxXp)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LevelName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MinXp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaxXp)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.LevelId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.LevelId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.LevelId })
+        </td>
+    </tr>
+}
+
+</table>
