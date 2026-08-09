@@ -10,7 +10,7 @@ using MSIT_02.Data;
 using MSIT_02.Models.Entities;
 
 namespace MSIT_02.Controllers
-{
+{//單純字典表 CRUD,讓它先產生樣板
     public class LevelsController : Controller
     {
         private MSIT_02Context db = new MSIT_02Context();
